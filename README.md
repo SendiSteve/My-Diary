@@ -1,10 +1,6 @@
 # MyDiary API
 This is an api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
 
-[![Build Status](https://travis-ci.com/SendiSteve/My-Diary.svg?branch=develop)](https://travis-ci.com/SendiSteve/My-Diary)
-[![Coverage Status](https://coveralls.io/repos/github/SendiSteve/My-Diary/badge.svg?branch=develop)](https://coveralls.io/github/SendiSteve/My-Diary?branch=develop)
-[![Maintainability](https://api.codeclimate.com/v1/badges/05dc968bdbd26eb874f5/maintainability)](https://codeclimate.com/github/SendiSteve/My-Diary/maintainability)
-
 ## Technologies
 1. Python 3.6.4
 2. Flask==1.0.2
