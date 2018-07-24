@@ -310,14 +310,14 @@ span a {
 }
 
 .contents a{
-   margin-left: 450px;
+   margin-left: 400px;
 }
 
 /* addContents page */
 
 textarea {
     overflow: hidden;
-    width: 850px;
+    width: 760px;
     height: 100px;
     padding: 20px;
     border: 2px solid #bdc3c7;
