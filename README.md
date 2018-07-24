@@ -1,5 +1,5 @@
-# MyDiary RESTFUL API
-This is a restful api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
+# MyDiary API
+This is an api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
 
 [![Build Status](https://travis-ci.com/SendiSteve/My-Diary.svg?branch=develop)](https://travis-ci.com/SendiSteve/My-Diary)
 [![Coverage Status](https://coveralls.io/repos/github/SendiSteve/My-Diary/badge.svg?branch=develop)](https://coveralls.io/github/SendiSteve/My-Diary?branch=develop)
@@ -14,30 +14,26 @@ This is a restful api for MyDiary built with the python flask framework. It allo
 These following instructions will help to set up the application on a local development machine.
 
 1. Clone the repository
-
 ```
 https://github.com/SendiSteve/My-Diary.git```
+```
 
 2. Navigate to the repository
-
 ```
 cd My-Diary
 ``` 
 
 3. Create a virtual environment
-
 ```
 virtualenv venv
 ```
 
 4. Activate the virtual environment
-
 ```
 source venv/bin/activate
 ```
 
 5. Install dependencies
-
 ```
 pip install -r requirements.txt
 ```
