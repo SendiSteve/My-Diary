@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/SendiSteve/My-Diary.svg?branch=cp2)](https://travis-ci.org/SendiSteve/My-Diary)
+[![Coverage Status](https://coveralls.io/repos/github/SendiSteve/My-Diary/badge.svg)](https://coveralls.io/github/SendiSteve/My-Diary)
+
 # MyDiary API
 This is an api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
 
