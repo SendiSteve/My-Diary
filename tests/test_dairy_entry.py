@@ -9,7 +9,9 @@ class EntryTestCase(BaseTestCase):
         """Test entry can be created successfully through the api"""
 
         with self.client:
-            response = self.add_entry('Meeting with students')
+            response = self.add_entry(
+                'Meeting with students',
+                'Discuss about safty in school')
 
             # ensure that the result expected is in json format
             expected = json.loads(response.data.decode())
@@ -22,7 +24,9 @@ class EntryTestCase(BaseTestCase):
     def test_entry_cannot_be_created_twice(self):
         """Test entry cannot be created twice through the api"""
         with self.client:
-            response = self.add_entry('Meeting with students')
+            response = self.add_entry(
+                'Meeting with students',
+                'Discuss about safty in school')
 
             # ensure that the result expected is in json format
             expected = json.loads(response.data.decode())
@@ -30,13 +34,13 @@ class EntryTestCase(BaseTestCase):
             # verify that the result is bad request with 400 status code
             self.assertEqual(response.status_code, 400)
             self.assertEqual(expected.get('message'),
-                             'Entry with that name already recorded.')
-
+                             'Record already exists.')
 
     def test_entry_contains_atleast_5_characters(self):
         """Test entry title cannot have less than 5 characters"""
         with self.client:
-            response = self.add_entry("met")
+            response = self.add_entry(
+                "Mee", "Discuss about safty in school")
 
             # ensure that the result expected is in json format
             expected = json.loads(response.data.decode())
@@ -44,4 +48,4 @@ class EntryTestCase(BaseTestCase):
             # verify that the result is bad request with 400 status code
             self.assertEqual(response.status_code, 400)
             self.assertEqual(expected.get('message'),
-                             'Title should be at least 5 characters long.')
+                             'Please enter a valid entry title.')
