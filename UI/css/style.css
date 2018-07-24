@@ -1,0 +1,425 @@
+/*-------------------------------------------------------------------------------------------
+                DEFAULT VALUES:
+                
+                Font Family                   : Arial
+                California                    : #e68b41   (Buttons,headers, headings)
+                Sandrift                      : #b09785   (background)
+                Silver                        : #bdc3c7  (Buttons)
+                Seashell                      : #fff8f2   (background)
+                Onahau                        : #c8f3ff   (entry cards)
+                Blue Chalk                    : #f4c8ff   (entry cards)
+                Bunker                        : #2b2d2f   (footer bg)
+                Chardon                       : #FFEEE0   (card bg)
+---------------------------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0;
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/*----------------Global variables------------*/
+
+.wrapper {
+    width: 1440px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: .5rem 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.button-highlight {
+    background: #e68b41;
+    height: 40px;
+}
+
+/*---------------Banner styles----------------*/
+
+#banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+}
+
+header>p {
+    margin: 0;
+    padding-top: 50px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.35rem;
+}
+
+header>p>span {
+    color: #e68b41;
+}
+
+/*----------Landing------------*/
+
+.landing {
+    height: 500px;
+}
+
+.landingWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+
+.landingWrapper .content-left {
+    width: 60%;
+}
+
+.landingWrapper .content-right {
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+.landingWrapper .content-left>h3 {
+    font-size: 2.37rem;
+    line-height: 3.5rem
+}
+
+.landingWrapper .content-left>h3>span {
+    color: #fff;
+}
+
+.landingWrapper .content-left>p {
+    color: #000;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+.landingWrapper .content-right {
+    /* border-radius: 15px; */
+    background-color: #b09785;
+    opacity: 0.878;
+    box-shadow: 0px 47px 158px 0px rgba(0, 0, 0, 0.35);
+    height: 423px;
+}
+
+.register,
+.login {
+    width: 50%;
+    background: #e68b41;
+    color: #fff;
+    height: 50px;
+    padding-top: 10px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.register-form,
+.login-form {
+    background: #b09785;
+    box-sizing: border-box;
+    padding: 40px;
+    clear: both;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.input:focus {
+    border: 2px solid #e68b41;
+}
+
+span a {
+    color: #000;
+    font-style: italic;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/*----------Footer styles------------*/
+
+.footer {
+    background: #2b2d2f;
+    height: 40px;
+    text-align: center;
+}
+
+.footer p {
+    display: inline-block;
+    /* padding-top: 40px; */
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+}
+
+/*--------------Welcome page style----------------*/
+
+.nav-section {
+    /* display: flex; */
+    clear: both;
+    align-items: center;
+    height: 80px;
+    background: #e68b41;
+}
+
+.header {
+    padding-top: 5px;
+}
+
+.logo {
+    padding-top: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo,
+.profile {
+    float: left;
+    display: inline-block;
+}
+
+.profile {
+    float: right;
+    margin-right:100px; 
+}
+.profile p{
+    position: relative;
+    top: -50px;
+    left: 100px;
+    color: #fff;
+}
+.profile a {
+    text-decoration: none;}
+
+.profile img {
+    border-radius: 100%;
+}
+
+.main {
+    margin-top: 100px;
+    margin-left: 250px;
+    color: #000;
+}
+
+.main>input {
+    margin-bottom: 50px;
+    margin-left: 30px;
+    padding: 10px;
+    width: 483px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #b09785;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.main .button-small {
+    width: 180px;
+}
+
+.main .button-highlight {
+    width: 180px;
+    background: #00bff3;
+    padding: 0;
+    padding-top: 10px;
+}
+
+/*-------- entry-card styles------- */
+
+.entry-card {
+    width: 80%;
+    /* background: #fff8f2; */
+    margin-bottom: 30px;
+    
+}
+
+.entry-card p {
+    color: red;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.entry-card>.card-entry-wrapper {
+    padding: 30px;
+}
+
+.entry-card>.card-entry-wrapper>.card-entry-content {
+    margin-bottom: 30px;
+    background: #c8f3ff;
+    padding: 20px;
+    height: 60px;
+    box-shadow: 0px 47px 158px 0px rgba(110, 109, 109, 0.35);
+}
+
+.main .enter-entry {
+    width: 100px;
+    background: #bdc3c7;
+    color: #fff;
+    border-style: none;
+}
+.main .enter-entry:hover,
+.main .enter-entry:focus{
+    background: #7f8c8d;
+
+}
+.trash {
+    float: right;
+    margin-right: 20px;
+}
+
+.edit {
+    float: right;
+}
+
+.contents a{
+   margin-left: 450px;
+}
+
+/* addContents page */
+
+textarea {
+    overflow: hidden;
+    width: 850px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid #bdc3c7;
+    margin-bottom: 20px;
+}
+
+textarea:focus {
+    border: 1px solid #00bff3;
+}
+
+.btn-add {
+    background: #bdc3c7;
+    color: #fff;
+}
+.btn-add:hover,.btn-add:focus {
+    background: #7f8c8d;
+}
+
+/* Profile page styles */
+
+.profile-content {
+    width: 60%;
+    margin: 60px auto;
+    border: 22px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    height: 500px;
+    display: table;
+}
+
+.profile-content img {
+    display: table-cell;
+    margin: 30px 40%;
+    width: 120px;
+}
+
+.profile-content h4 {
+    padding: 20px;
+    font-size: 24px;
+}
+#center-profile{
+    margin-left: 150px;
+    margin-right: 150px;
+
+}
+
+div h5 {
+    padding: 0 20px;
+    font-style: italic;
+}
+
+div h5>span {
+    color: red;
+}
+
+address {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+address>p>span {
+    color: #888;
+}
+
+div p>a {
+    padding: 20px;
+}
+
+div>.button-update {
+    color: #fff;
+    margin: 30px 20px;
+    background: #bdc3c7;
+}
+div>.button-update:hover,
+div>.button-update:focus {
+    background: #7f8c8d;
+}
+
+/* Edit entry content */
+
+.entry-data h3 {
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+.entry-data>ul {
+    list-style: none;
+}
+
+.entry-data>ul>li {
+    padding: 10px;
+    background: #d8afdb;
+    margin-bottom: 10px;
+    color: #2b2d2f;
+}
+
+/* Update entry */
+
+.edit-entry-content> .input-edit {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 850px;
+}
+.input-edit:focus{
+    border: 1px solid #00bff3;
+} 
