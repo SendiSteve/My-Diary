@@ -55,9 +55,7 @@ Test the endpoints below using Postman
 
 | End Point                      | Method        |   Functionality               |   Functionality  |
 | -----------------------------  | ------------- | -------------------------     | ---------------- |    
-| `/api/v1/auth/signup`          | POST          | User can create an account    | PUBLIC           |
-| `/api/v1/auth/login`           | POST          | User can log in to the account| PUBLIC           |
-| `/api/v1/users/entries`           |  GET       | User can GET all entries      | PRIVATE          |
-| `/api/v1/users/entries`           |  POST       | User can ADD all entries      | PRIVATE          |
-| `/api/v1/users/entries/<int:entry_id>`| DELETE | User can DELETE an entry by its id  | PRIVATE          |
-| `/api/v1/users/entries/<int:entry_id>`| PUT    | User can UPDATE an entry by its id  | PRIVATE          |
+| `/api/v1/entries`           |  GET       | User can GET all entries      | PUBLIC          |
+| `/api/v1/entries`           |  POST       | User can ADD all entries      | PUBLIC          |
+| `/api/v1/entries/<int:entry_id>`| DELETE | User can DELETE an entry by its id  | PUBLIC         |
+| `/api/v1/entries/<int:entry_id>`| PUT    | User can UPDATE an entry by its id  | PUBLIC          |
