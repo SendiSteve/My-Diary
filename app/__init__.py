@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from config import app_config
+from app.views import EntryList
 
 
 def create_app():
@@ -12,7 +13,8 @@ def create_app():
 
 
 app = create_app()
-
+api = Api(app)
 
 # import config settings into the application
 app.config.from_object(app_config['development'])
+api.add_resource(EntryList, '/api/v1/entries')
