@@ -5,6 +5,8 @@
 # MyDiary API
 This is an api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
 
+This API is live and hosted on [heroku](https://mydiarypro.herokuapp.com/)
+
 ## Technologies
 1. Python 3.6.4
 2. Flask==1.0.2
