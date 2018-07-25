@@ -56,3 +56,11 @@ class BaseTestCase(unittest.TestCase):
                 notes="Take queencher for him")),
             content_type='application/json'
         )
+
+    def delete_entry(self):
+        """This method deletes a single entry"""
+        id = self.get_id()
+        return self.client.delete(
+            'api/v1/entries/{}'.format(id),
+            content_type='application/json'
+        )

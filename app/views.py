@@ -83,8 +83,8 @@ class EntryResource(Resource):
                 entry.notes = args['notes']
 
                 return make_response(jsonify(
-                    {'message': 'Record updated successfully.'}),
+                    {'message': 'Entry updated successfully.'}),
                     201)
         return make_response(jsonify(
-            {'message': 'Record with that ID not found'}),
+            {'message': 'Entry with that ID not found'}),
             400)
