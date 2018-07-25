@@ -89,6 +89,22 @@ class EntryResource(Resource):
             {'message': 'Entry with that ID not found'}),
             400)
 
+    def get(self, entry_id):
+        """Returns a single entry"""
+        for entry in ENTRIES:
+            if entry.id == entry_id:
+                entry_data = {
+                    "id": entry.id,
+                    "title": entry.title,
+                    "notes": entry.notes,
+                    "date_created": entry.date_created
+                }
+
+                return make_response(jsonify({
+                    'Entry': entry_data}), 200)
+        return make_response(jsonify({
+            'message': 'Entry with that id not found'}), 400)
+
     def delete(self, entry_id):
         """Handles deletion of a single entry"""
 
