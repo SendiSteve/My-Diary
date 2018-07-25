@@ -26,9 +26,9 @@ class BaseTestCase(unittest.TestCase):
     def add_entry(self, title, notes):
         """This method adds an entry"""
         return self.client.post(
-            'api/v1/user/entries',
+            'api/v1/entries',
             data=json.dumps(
                 dict(
                     title=title,
-                    notest=notes
+                    notes=notes
                 )), content_type='application/json')
