@@ -104,4 +104,20 @@ class EntryResource(Resource):
                     'Entry': entry_data}), 200)
         return make_response(jsonify({
             'message': 'Entry with that id not found'}),
+
+    def delete(self, entry_id):
+        """Handles deletion of a single entry"""
+
+        for entry in ENTRIES:
+            if entry.id == entry_id:
+                ENTRIES.remove(entry)
+
+                return make_response(jsonify(
+                    {'message': 'Entry delete successfully!'}), 200)
+
+            return make_response(jsonify({
+                'message': 'Entry with that id not found'}),
+                400)
+        return make_response(jsonify({
+            'message': 'Entry not found'}),
             400)

@@ -35,7 +35,7 @@ class Entry(object):
         for entry in ENTRIES:
             if self.title == entry.title:
                 return {
-                    'message': 'Record already exists.',
+                    'message': 'Entry already exists.',
                     'status': False
                 }
         # append newEntry object to ENTRIES

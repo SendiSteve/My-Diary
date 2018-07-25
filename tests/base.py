@@ -64,3 +64,11 @@ class BaseTestCase(unittest.TestCase):
             'api/v1/entries/{}'.format(id),
             content_type='application/json'
         )
+
+    def get_one_entry(self):
+        """This method retrieves a single entry"""
+        id = self.get_id()
+        return self.client.get(
+            'api/v1/entries/{}'.format(id),
+            content_type='application/json'
+        )

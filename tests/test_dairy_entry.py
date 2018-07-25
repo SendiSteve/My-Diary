@@ -36,7 +36,7 @@ class EntryTestCase(BaseTestCase):
             # verify that the result is bad request with 400 status code
             self.assertEqual(response.status_code, 400)
             self.assertEqual(expected.get('message'),
-                             'Record already exists.')
+                             'Entry already exists.')
 
     def test_entry_contains_atleast_5_characters(self):
         """Test entry title cannot have less than 5 characters"""
@@ -95,3 +95,12 @@ class EntryTestCase(BaseTestCase):
             self.assertEqual(response.status_code, 200)
             self.assertEqual(expected.get('message'),
                              "Entry delete successfully!")
+
+    def test_get_one_entry(self):
+        with self.client:
+            self.add_entry(
+                'Visiting Rome for holiday',
+                'Save enough money for the holiday')
+            self.get_id()
+            response = self.get_one_entry()
+            self.assertEqual(response.status_code, 200)
