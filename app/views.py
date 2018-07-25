@@ -60,3 +60,31 @@ class EntryList(Resource):
             }
             entries.append(entry_data)
         return make_response(jsonify({"Entries": entries}), 200)
+
+
+class EntryResource(Resource):
+    """Handles operations on a single entry"""
+
+    def put(self, entry_id):
+        """Handles update of a single entry"""
+
+        parser = reqparse.RequestParser()
+        parser.add_argument('title', type=str, required=True)
+        parser.add_argument('notes', type=str, required=True)
+
+        for entry in ENTRIES:
+            if entry.id == entry_id:
+                args = parser.parse_args()
+                if entry.title in ENTRIES:
+                    return make_response(jsonify({
+                        'message': 'Entry with that name already recorded.'}),
+                        400)
+                entry.title = args['title']
+                entry.notes = args['notes']
+
+                return make_response(jsonify(
+                    {'message': 'Record updated successfully.'}),
+                    201)
+        return make_response(jsonify(
+            {'message': 'Record with that ID not found'}),
+            400)
