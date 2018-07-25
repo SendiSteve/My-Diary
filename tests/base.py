@@ -32,3 +32,10 @@ class BaseTestCase(unittest.TestCase):
                     title=title,
                     notes=notes
                 )), content_type='application/json')
+
+    def retrieve_all_entries(self):
+        """This method retrieves all entries of a diary"""
+        return self.client.get(
+            'api/v1/entries',
+            content_type='application/json'
+        )
