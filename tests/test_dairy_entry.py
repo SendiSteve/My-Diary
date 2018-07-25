@@ -63,3 +63,18 @@ class EntryTestCase(BaseTestCase):
 
             # verify that the result is success with 200 status code
             self.assertEqual(response.status_code, 200)
+
+    def test_update_a_single_entry(self):
+        """Test a single entry can be updated successfully"""
+        with self.client:
+            self.add_entry("Go swimming", "Buy swimming jacket")
+            self.get_id()
+            response = self.update_entry()
+
+            # ensure that the result expected is in json format
+            expected = json.loads(response.data.decode())
+
+            # verify that the result is created with 201 status code
+            self.assertEqual(response.status_code, 201)
+            self.assertEqual(expected.get('message'),
+                             "Record updated successfully.")

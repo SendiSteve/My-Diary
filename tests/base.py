@@ -39,3 +39,20 @@ class BaseTestCase(unittest.TestCase):
             'api/v1/entries',
             content_type='application/json'
         )
+
+    def get_id(self):
+        """This method gets an id of an entry in a list"""
+        response = self.retrieve_all_entries()
+        id = json.loads(response.data.decode())['Entries'][0]['id']
+        return id
+
+    def update_entry(self):
+        """This method edits an existing entry"""
+        id = self.get_id()
+        return self.client.put(
+            'api/v1/entries/{}'.format(id),
+            data=json.dumps(dict(
+                title="Visiting my son",
+                notes="Take queencher for him")),
+            content_type='application/json'
+        )
