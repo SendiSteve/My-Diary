@@ -1,5 +1,11 @@
+[![Build Status](https://travis-ci.org/SendiSteve/My-Diary.svg?branch=cp2)](https://travis-ci.org/SendiSteve/My-Diary)
+[![Coverage Status](https://coveralls.io/repos/github/SendiSteve/My-Diary/badge.svg)](https://coveralls.io/github/SendiSteve/My-Diary)
+[![Maintainability](https://api.codeclimate.com/v1/badges/05dc968bdbd26eb874f5/maintainability)](https://codeclimate.com/github/SendiSteve/My-Diary/maintainability)
+
 # MyDiary API
 This is an api for MyDiary built with the python flask framework. It allows users to pen down their entries they wish to accomplish.
+
+This API is live and hosted on [heroku](https://mydiarypro.herokuapp.com/)
 
 ## Technologies
 1. Python 3.6.4
@@ -55,9 +61,7 @@ Test the endpoints below using Postman
 
 | End Point                      | Method        |   Functionality               |   Functionality  |
 | -----------------------------  | ------------- | -------------------------     | ---------------- |    
-| `/api/v1/auth/signup`          | POST          | User can create an account    | PUBLIC           |
-| `/api/v1/auth/login`           | POST          | User can log in to the account| PUBLIC           |
-| `/api/v1/users/entries`           |  GET       | User can GET all entries      | PRIVATE          |
-| `/api/v1/users/entries`           |  POST       | User can ADD all entries      | PRIVATE          |
-| `/api/v1/users/entries/<int:entry_id>`| DELETE | User can DELETE an entry by its id  | PRIVATE          |
-| `/api/v1/users/entries/<int:entry_id>`| PUT    | User can UPDATE an entry by its id  | PRIVATE          |
+| `/api/v1/entries`           |  GET       | User can GET all entries      | PUBLIC          |
+| `/api/v1/entries`           |  POST       | User can ADD all entries      | PUBLIC          |
+| `/api/v1/entries/<int:entry_id>`| DELETE | User can DELETE an entry by its id  | PUBLIC         |
+| `/api/v1/entries/<int:entry_id>`| PUT    | User can UPDATE an entry by its id  | PUBLIC          |
