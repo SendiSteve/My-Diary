@@ -3,7 +3,7 @@
 from flask import jsonify, make_response
 from flask_restful import Resource, reqparse
 
-from app.models import Entry
+from app.models import Entry, ENTRIES
 
 
 class EntryList(Resource):
@@ -45,3 +45,18 @@ class EntryList(Resource):
         return make_response(jsonify({
             "message": resp['message']
         }), 201)
+
+    def get(self):
+        """Handles retrieval of all entries in a diary"""
+
+        entries = []
+
+        for entry in ENTRIES:
+            entry_data = {
+                "id": entry.id,
+                "title": entry.title,
+                "notes": entry.notes,
+                "date_created": entry.date_created
+            }
+            entries.append(entry_data)
+        return make_response(jsonify({"Entries": entries}), 200)
