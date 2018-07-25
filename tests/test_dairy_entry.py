@@ -49,18 +49,3 @@ class EntryTestCase(BaseTestCase):
             self.assertEqual(response.status_code, 400)
             self.assertEqual(expected.get('message'),
                              'Please enter a valid entry title.')
-
-
-    def test_retrieve_all_entries(self):
-        """Test all entries can be retrieved successfully"""
-        with self.client:
-            # Create an entry first
-            self.add_entry(
-                "Meeting with CEO Andela",
-                "Discuss about marketing strategies")
-
-            # retrieve the created entry
-            response = self.retrive_all_entries()
-
-            # verify that the result is bad request with 400 status code
-            self.assertEqual(response.status_code, 200)
